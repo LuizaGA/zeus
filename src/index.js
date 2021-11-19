@@ -6,11 +6,11 @@ const dataBase = require('./database/index')
 const app = express();
 dataBase()
 
-app.use(cors());
-app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(morgan('dev'));
+app.use(cors());
+app.options('*', cors());
 app.all('*', require('./routes/index'))
 
-app.listen(3000);
+app.listen(4000);

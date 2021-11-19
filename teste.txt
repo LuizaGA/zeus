@@ -1,0 +1,2 @@
+clonar git - na pasta do terminal que você quer colocar o arquivo, digita:
+    git clone (http://... do arquivo)
