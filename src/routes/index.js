@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/dog_food', require('./dogFoodRoutes'));
+router.use('/', require('./dogFoodRoutes'));
 
 module.exports = router;
