@@ -79,10 +79,11 @@ module.exports = {
       });
       for (let i = 0; i <= dogFood.length - 1; i++) {
         amountPrice += dogFood[i].price;
-        //amountQuantity += dogFood[i].quantity;
+        amountQuantity += dogFood[i].quantity;
       }
       const amount = {
         totalPrice: amountPrice,
+        totalQuantity: amountQuantity,
       };
 
       return res.send(amount);
