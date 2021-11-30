@@ -66,15 +66,15 @@ module.exports = {
   total: async (req, res) => {
     let month = req.query.month;
     let year = req.query.year;
-    const date = new Date();
+    //const date = new Date();
 
     let amountPrice = 0;
     let amountQuantity = 0;
     try {
       const dogFood = await Food.find({
         createdAt: {
-          $gte: new Date(year, month, 1),
-          $lte: new Date(year, month + 1, 1),
+          $gte: new Date(year, month - 1),
+          $lte: new Date(year, month),
         },
       });
       for (let i = 0; i <= dogFood.length - 1; i++) {
